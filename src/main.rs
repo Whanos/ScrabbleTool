@@ -13,8 +13,10 @@ fn main() {
     let trie = generate_trie();
     let duration = start.elapsed();
     println!("Generated Trie. Time taken: {:?}", duration);
-
-    let words = generate_words_from_hand("JILURSV".to_string(), trie);
+    let start = Instant::now();
+    let words = generate_words_from_hand("ABJKMIGF".to_string(), trie);
+    let duration = start.elapsed();
+    println!("Generated Words. Time taken: {:?}", duration);
     for word in words {
         println!{"{} - {}", word, scorer::score_word(word.clone())};
     }
