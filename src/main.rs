@@ -14,7 +14,7 @@ fn main() {
     let duration = start.elapsed();
     println!("Generated Trie. Time taken: {:?}", duration);
     let start = Instant::now();
-    let words = generate_words_from_hand("ABJKMIGF".to_string(), trie);
+    let words = generate_words_from_hand("IREEA*G".to_string(), trie);
     let duration = start.elapsed();
     println!("Generated Words. Time taken: {:?}", duration);
     for word in words {
